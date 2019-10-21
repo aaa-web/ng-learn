@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../interfaces/user';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  friends: User[];
+
+  constructor() {
+    this.friends = [
+      {
+        nick: 'andrec',
+        subnick: 'elfriend',
+        email: 'andres.castro@pragma.com.co',
+        friend: true,
+        uid: '001'
+      },
+      {
+        nick: 'moralej',
+        subnick: 'jenkinsman',
+        email: 'andres.morales@pragma.com.co',
+        friend: true,
+        uid: '001'
+      },
+      {
+        nick: 'jonnatan',
+        subnick: 'angulero',
+        email: 'jonnatan.rios@pragma.com.co',
+        friend: true,
+        uid: '001'
+      }
+    ];
+   }
 
   ngOnInit() {
   }
