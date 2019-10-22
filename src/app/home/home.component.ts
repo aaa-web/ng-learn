@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
         nick: 'andrec',
         subnick: 'elfriend',
         email: 'andres.castro@pragma.com.co',
-        friend: true,
+        friend: false,
         uid: '001'
       },
       {
@@ -24,14 +24,14 @@ export class HomeComponent implements OnInit {
         subnick: 'jenkinsman',
         email: 'andres.morales@pragma.com.co',
         friend: true,
-        uid: '001'
+        uid: '002'
       },
       {
         nick: 'jonnatan',
         subnick: 'angulero',
         email: 'jonnatan.rios@pragma.com.co',
         friend: true,
-        uid: '001'
+        uid: '003'
       }
     ];
    }
