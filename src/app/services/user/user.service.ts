@@ -22,22 +22,33 @@ export class UserService {
         nick: 'andrec',
         subnick: 'elfriend',
         email: 'andres.castro@pragma.com.co',
-        friend: false,
-        uid: '001'
+        friend: true,
+        uid: '001',
+        status: 'online'
       },
       {
         nick: 'moralej',
         subnick: 'jenkinsman',
         email: 'andres.morales@pragma.com.co',
         friend: true,
-        uid: '002'
+        uid: '002',
+        status: 'offline'
       },
       {
         nick: 'jonnatan',
         subnick: 'angulero',
         email: 'jonnatan.rios@pragma.com.co',
         friend: true,
-        uid: '003'
+        uid: '003',
+        status: 'busy'
+      },
+      {
+        nick: 'pelu',
+        subnick: 'mr_node',
+        email: 'cristian.arias@pragma.com.co',
+        friend: true,
+        uid: '004',
+        status: 'away'
       }
     ]
   }
