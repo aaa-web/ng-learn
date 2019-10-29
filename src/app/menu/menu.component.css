@@ -1,3 +1,31 @@
 .main-logo {
-    width: 60px;
+    width: 40px;
+}
+ .branding {
+     padding: 5px !important;
+     border-top: none !important;
+     border-right: none !important;
+ }
+
+#menuContainer {
+    background: rgb(64,190,228);
+    background: -moz-linear-gradient(0deg, rgba(64,190,228,1) 0%, rgba(240,249,255,1) 72%);
+    background: -webkit-linear-gradient(0deg, rgba(64,190,228,1) 0%, rgba(240,249,255,1) 72%);
+    background: linear-gradient(0deg, rgba(64,190,228,1) 0%, rgba(240,249,255,1) 72%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#40bee4",endColorstr="#f0f9ff",GradientType=1);
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    height: 56px;
+    /* it's like a margin top */
+    top: 0px; 
+    border-top: 1px solid white;
+}
+
+#menuContainer > .item {
+    padding: 15px;
+    color: white;
+    cursor: default;
+    background-origin: 1px solid white;
+    display: inline-block;
 }
