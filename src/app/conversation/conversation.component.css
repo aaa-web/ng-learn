@@ -1,0 +1,9 @@
+#conversationContainer {
+    background-image: url(/assets/img/msnbg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#conversationAvatarPicture {
+    max-width: 100px;
+}
