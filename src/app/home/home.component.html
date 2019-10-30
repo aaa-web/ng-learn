@@ -1,12 +1,26 @@
-<br />
-<input type="text" placeholder="Buscar Amigo" [(ngModel)]="query" >
-<br />
-<b>Amigos</b>
-<ng-container *ngFor="let user of friends | search: query; let i = index"> 
-    <div>
-        <img class="status-logo" src="../../assets/img/logo_live_{{user.status}}.png" alt="">
-        <a routerLink="/conversation/{{user.uid}}">
-            {{i+1}}. {{user.nick}} - {{user.email}}
-        </a>
+<div id="homeContainer">
+<div class="white-border-glassbox">
+    <div class="home-head-container">
+        <div class="row">
+            <div class="col-md-auto">
+                <div class="avatar-frame-online">
+                        <img id="homeAvatarPicture" src="../../assets/img/generic_avatar.png" alt="avatar">
+                </div>
+            </div>
+        </div>
     </div>
-</ng-container>
+</div>
+
+    <input type="text" placeholder="Buscar Amigo" [(ngModel)]="query" >
+    <br />
+    <b>Amigos</b>
+    <ng-container *ngFor="let user of friends | search: query; let i = index"> 
+        <div>
+            <img class="status-logo" src="../../assets/img/logo_live_{{user.status}}.png" alt="">
+            <a routerLink="/conversation/{{user.uid}}">
+                {{i+1}}. {{user.nick}} - {{user.email}}
+            </a>
+        </div>
+    </ng-container>
+</div>
+<br />

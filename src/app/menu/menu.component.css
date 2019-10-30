@@ -8,11 +8,11 @@
  }
 
 #menuContainer {
-    background: rgb(64,190,228);
-    background: -moz-linear-gradient(0deg, rgba(64,190,228,1) 0%, rgba(240,249,255,1) 72%);
-    background: -webkit-linear-gradient(0deg, rgba(64,190,228,1) 0%, rgba(240,249,255,1) 72%);
-    background: linear-gradient(0deg, rgba(64,190,228,1) 0%, rgba(240,249,255,1) 72%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#40bee4",endColorstr="#f0f9ff",GradientType=1);
+    background: rgb(122,232,255);
+    background: -moz-linear-gradient(180deg, rgba(122,232,255,1) 0%, rgba(155,236,252,1) 40%, rgba(15,168,199,1) 69%);
+    background: -webkit-linear-gradient(180deg, rgba(122,232,255,1) 0%, rgba(155,236,252,1) 40%, rgba(15,168,199,1) 69%);
+    background: linear-gradient(180deg, rgba(122,232,255,1) 0%, rgba(155,236,252,1) 40%, rgba(15,168,199,1) 69%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ae8ff",endColorstr="#0fa8c7",GradientType=1);
     position: fixed;
     width: 100%;
     z-index: 9;
@@ -26,6 +26,6 @@
     padding: 15px;
     color: white;
     cursor: default;
-    background-origin: 1px solid white;
+    border: 1px solid white;
     display: inline-block;
 }

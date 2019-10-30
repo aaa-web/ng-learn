@@ -1,3 +1,18 @@
+#homeContainer {
+    background-image: url(/assets/img/msnbg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#white-border-glassbox {
+    border: 2px solid rgba(255,255,255,.75);
+    padding: 8px;
+}
+
+.home-head-container {
+    
+}
+
 .status-logo {
     width: 25px;
     margin: 5px 10px;
