@@ -7,7 +7,6 @@ import { AngularFireAuth } from '@angular/fire/auth'
 export class AuthenticationService {
 
   constructor(private angularFireAuth: AngularFireAuth) {
-
   }
 
   loginWithEmail(email: string, password: string) {
