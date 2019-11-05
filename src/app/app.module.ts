@@ -32,11 +32,11 @@ import { SearchPipe } from './pipes/search';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase), // firebase configuration
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
-    AngularFireDatabaseModule,
+    AngularFireDatabaseModule, // database conection
     AppRoutingModule,
     HttpClientModule,
     FormsModule
