@@ -17,11 +17,11 @@ export class ConversationComponent implements OnInit {
               private userService: UserService) {
 
     this.friendId = activatedRoute.snapshot.params['uid'];
-    this.friends = userService.getFriends();
-    this.friend = this.friends.find((record) => {
-      return record.uid == this.friendId;
-    });
-    console.log(this.friend);
+    // this.friends = userService.getFriends();
+    // this.friend = this.friends.find((record) => {
+    //   return record.uid == this.friendId;
+    // });
+    // console.log(this.friend);
     
    }
 

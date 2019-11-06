@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   getFriends() {
     // this.userService.getAll().subscribe((data:User[]) => (this.friends = data));
-    this.friends = this.userService.getFriends();
+    // this.friends = this.userService.getFriends();
   }
 
 }
