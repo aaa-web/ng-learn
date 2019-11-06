@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../interfaces/user';
 import { UserService } from '../services/user/user.service';
+import { AuthenticationService } from '../services/auth/authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,11 @@ export class HomeComponent implements OnInit {
   friends: User[];
   query: string = '';
 
-  constructor( private userService: UserService ) {
+  constructor( 
+    private userService: UserService,
+    private authenticationService: AuthenticationService,
+    private router: Router
+    ) {
     
   }
 
@@ -33,5 +39,21 @@ export class HomeComponent implements OnInit {
       }
     );
   }
+
+  logout() {
+    this.authenticationService.logOut().then(
+      () => { // Cuando hacemos logout redirigimos al login
+        alert('Sesión cerrada con éxito');
+        this.router.navigate(['login']);
+      }
+    ).catch(
+      (error) => {
+        console.log(error);        
+      }
+    );
+  }
+  
+
+
 
 }
