@@ -8,6 +8,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import { ImageCropperModule } from "ngx-image-cropper";
 
 import { environment } from "../environments/environment";
 
@@ -39,7 +40,8 @@ import { SearchPipe } from './pipes/search';
     AngularFireDatabaseModule, // database conection
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule, 
+    ImageCropperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
