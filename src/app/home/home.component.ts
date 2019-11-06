@@ -22,7 +22,16 @@ export class HomeComponent implements OnInit {
 
   getFriends() {
     // this.userService.getAll().subscribe((data:User[]) => (this.friends = data));
-    // this.friends = this.userService.getFriends();
+
+    //como el servicio retorna un observable nos suscribimos a sus eventos
+    this.userService.getUsers().valueChanges().subscribe(
+      (data: User[]) => {
+        this.friends = data;
+      },
+      (error) => {
+        console.log(error)
+      }
+    );
   }
 
 }
