@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   friends: User[];
+  user: User;
   query: string = '';
 
   constructor( 
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getSessionUser();
     this.getFriends();    
   }
 
@@ -36,6 +38,25 @@ export class HomeComponent implements OnInit {
       },
       (error) => {
         console.log(error)
+      }
+    );
+  }
+
+  getSessionUser() {
+    this.authenticationService.getSesionStatus().subscribe(
+      (status) => {
+        this.userService.getUserById(status.uid).valueChanges().subscribe(
+          (data: User) => {
+            this.user = data;
+            console.log(data);
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
+      }, 
+      (error) => {
+        console.log(error);
       }
     );
   }

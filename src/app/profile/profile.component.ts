@@ -14,11 +14,10 @@ export class ProfileComponent implements OnInit {
   constructor(
     private userService: UserService,
     private authenticationService: AuthenticationService
-    ) { 
-      this.getSesionUser();
-    }
-
+    ) { }
+    
   ngOnInit() {
+    this.getSesionUser();
   }
   
   getSesionUser() {
