@@ -9,6 +9,7 @@ import { AngularFireStorageModule } from "@angular/fire/storage";
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { ImageCropperModule } from "ngx-image-cropper";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { environment } from "../environments/environment";
 
@@ -41,7 +42,8 @@ import { SearchPipe } from './pipes/search';
     AppRoutingModule,
     HttpClientModule,
     FormsModule, 
-    ImageCropperModule
+    ImageCropperModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
