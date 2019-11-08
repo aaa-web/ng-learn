@@ -21,7 +21,7 @@ import { ConversationComponent } from './conversation/conversation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MenuComponent } from './menu/menu.component';
 import { SearchPipe } from './pipes/search';
-import { RequestComponent } from './modals/request/request/request.component';
+import { RequestComponent } from './modals/request/request.component';
 
 
 @NgModule({
