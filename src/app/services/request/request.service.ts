@@ -11,17 +11,17 @@ export class RequestService {
   ) { }
 
   createRequest(request) {
-    const cleanEmail = request.reciever_email.replace('.', ',');
+    const cleanEmail = request.reciever_email.replace(/\./g, ',');
     return this.angularFireDatabase.object('requests/' + cleanEmail + '/' + request.sender).set(request);
   }
 
   setRequestStatus(request, status) {
-    const cleanEmail = request.reciever_email.replace('.', ',');
+    const cleanEmail = request.reciever_email.replace(/\./g, ',');
     return this.angularFireDatabase.object('requests/' + cleanEmail + '/' + request.sender + '/status').set(status);
   }
 
   getRequestsForEmail(email) {
-    const cleanEmail = email.replace('.', ',');
+    const cleanEmail = email.replace(/\./g, ',');
     return this.angularFireDatabase.list('requests/' + cleanEmail);
   }
 }

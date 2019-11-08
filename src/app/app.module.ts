@@ -10,6 +10,7 @@ import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { ImageCropperModule } from "ngx-image-cropper";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 
 import { environment } from "../environments/environment";
 
@@ -43,7 +44,8 @@ import { SearchPipe } from './pipes/search';
     HttpClientModule,
     FormsModule, 
     ImageCropperModule,
-    NgbModule
+    NgbModule,
+    BootstrapModalModule.forRoot({container:document.body}) // modals dialogs placeholder will be added to app.component
   ],
   providers: [],
   bootstrap: [AppComponent]

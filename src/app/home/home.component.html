@@ -7,7 +7,7 @@
                         <img id="homeAvatarPicture" src="assets/img/generic_avatar.png" alt="avatar">
                     </div>
                 </div>
-                <div class="col">
+                <div *ngIf="user" class="col">
                     <b>{{user.nick}}</b>
                     <div>
                         <span>{{user.status}}</span>
@@ -52,7 +52,7 @@
         </button>
     </div>
     <div class="modal-body">
-        <div class="row">
+        <div class="">
             <b>Ingresa el email de tu amigo</b>
             <input [(ngModel)]="friendEmail" (keyup.enter)="sendRequest()" type="email" class="form-control" placeholder="email">
         </div>
