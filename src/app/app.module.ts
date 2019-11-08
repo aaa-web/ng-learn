@@ -21,6 +21,7 @@ import { ConversationComponent } from './conversation/conversation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MenuComponent } from './menu/menu.component';
 import { SearchPipe } from './pipes/search';
+import { RequestComponent } from './modals/request/request/request.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { SearchPipe } from './pipes/search';
     ConversationComponent,
     ProfileComponent,
     MenuComponent, 
-    SearchPipe
+    SearchPipe, 
+    RequestComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { SearchPipe } from './pipes/search';
     BootstrapModalModule.forRoot({container:document.body}) // modals dialogs placeholder will be added to app.component
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [RequestComponent]
 })
 export class AppModule { }

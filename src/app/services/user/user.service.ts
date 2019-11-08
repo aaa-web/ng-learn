@@ -40,5 +40,11 @@ export class UserService {
     const requestUrl = `${this.urlFriends}/friends`;
     return this.httpClient.get(requestUrl);
   }
+
+  addFriend(userId, friendId) {
+    this.angularFireDatabase.object('users/' + userId + '/friends/' + friendId).set(friendId);
+    return this.angularFireDatabase.object('users/' + friendId + '/friends/' + userId).set(userId);
+  }
+  
   
 }
