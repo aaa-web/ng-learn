@@ -52,7 +52,11 @@ export class HomeComponent implements OnInit {
         this.userService.getUserById(status.uid).valueChanges().subscribe(
           (data: User) => {
             this.user = data;
-            console.log(data);
+            // console.log(data);
+            if(this.user.friends) {
+              this.user.friends = Object.values(this.user.friends);
+              console.log(this.user.friends);              
+            }
           },
           (error) => {
             console.log(error);

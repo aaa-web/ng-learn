@@ -22,6 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { MenuComponent } from './menu/menu.component';
 import { SearchPipe } from './pipes/search';
 import { RequestComponent } from './modals/request/request.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { RequestComponent } from './modals/request/request.component';
     ProfileComponent,
     MenuComponent, 
     SearchPipe, 
-    RequestComponent
+    RequestComponent, ContactComponent
   ],
   imports: [
     BrowserModule,

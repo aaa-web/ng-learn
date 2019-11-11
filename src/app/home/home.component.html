@@ -32,14 +32,11 @@
         </div>
 
         <hr />
-        <b *ngIf="friends">Amigos ({{friends.length}} / {{friends.length}})</b>
-        <div *ngFor="let user of friends | search: query" class="display-block margin-bottom-5">             
-            <span routerLink="/conversation/{{user.uid}}">
-                <!-- <img class="icon" src="../../assets/img/logo_live_{{user.status}}.png" alt=""> -->
-                <img class="icon" src="../../assets/img/logo_live_online.png" alt="">
-                <b>{{user.nick}}</b> - {{user.subnick || 'No subnick'}}
-                <small>- {{user.email}}</small>
-            </span>            
+        <b *ngIf="user && user.friends">Amigos ({{user.friends.length}} / {{user.friends.length}})</b>
+        <div *ngIf="user && user.friends">
+            <div class="display-block margin-bottom-5">             
+                <app-contact *ngFor="let user of user.friends" class="col-md-12" [uid]="user"></app-contact>
+            </div>
         </div>
     </div>
 </div>
